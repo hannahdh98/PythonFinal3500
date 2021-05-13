@@ -29,9 +29,9 @@ flask run
 
 # Application File Structure
 flask_auth_app/
-- project/
-  - static/
-    - styles/
+## project/
+  ## static/
+    ## styles/
          custom.css
          custom.css.map
     graphs.js
@@ -41,7 +41,7 @@ flask_auth_app/
     bird4.png
     bird5.png
    
- - templates/
+ ## templates/
     - _formhelpers.html
     - base.html
     - edit-entry.html
@@ -53,7 +53,7 @@ flask_auth_app/
     - profile.html
     - signup.html
     - tables.html
-- __init__.py
+##  __init__.py
 - auth.py
 - forms.py
 - main.py
@@ -62,12 +62,12 @@ flask_auth_app/
 
 # Database Structure
 Create database named flask and schema flask.
-user/
+## user/
   - id
   - email
   - password
   - name
-entries/
+## entries/
   - bhid
   - date
   - id
