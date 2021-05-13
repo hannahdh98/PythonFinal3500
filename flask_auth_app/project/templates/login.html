@@ -1,0 +1,43 @@
+        		<!--calls base.html-->
+{% extends 'base.html' %}
+
+{% block content %}
+                        		<!--Login-->
+<h3 class="title is-centered-flex">Login</h3>
+<div class="column is-inline-flex">
+        <div class="box is-inline-flex">
+            <!-- get_flashed_messages() shows for the error-->
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="notification is-danger">
+                    {{ messages[0] }}
+                </div>
+            {% endif %}
+            {% endwith %}
+                    		<!--Form-->
+            <form method="POST" action="/login">
+                <div class="field">
+                    <div class="control">
+                        <input class="input is-large" type="email" name="email" placeholder="Your Email" autofocus="">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="control">
+                        <input class="input is-large" type="password" name="password" placeholder="Your Password">
+                    </div>
+                </div>
+        		<!--remember me button/checkbox-->
+                <div class="field">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+                </div>
+                        		<!--login button-->
+                <button class="button is-block is-info is-large is-fullwidth">Login</button>
+            </form>
+        </div>
+    </div>
+    {% endblock %}
+

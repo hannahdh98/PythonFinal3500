@@ -1,0 +1,97 @@
+                        <!-- This calls the base.html-->
+{% extends 'base.html' %}
+
+{% block content %}
+                                                <!-- This calls the _forhelpers.html-->
+{% from "_formhelpers.html" import render_field %}
+        <!--edit entry form-->
+<form method="POST"style="color:#000000;" action="{{ url_for('main.editEntry', entryId=entry['entryId']) }}"  xmlns="http://www.w3.org/1999/html" novalidate>
+    <label>Bird House Id</label>
+    <div>
+        <select class="select" name="bhid" id="bhid" value="{{ entry['bhid'] }}">
+            <option>{{ entry['bhid'] }}</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+        </select>
+    </div>
+                                    <!-- Date -->
+    <label>date</label>
+    <div>
+        <input type="text" name="date" value="{{ entry['date'] }}" >
+    </div>
+                                    <!-- Comments -->
+    <label>comments</label>
+    <div>
+        <textarea name="comments" data-value="{{ entry['comments'] }}" > {{ entry['comments'] }} </textarea>
+    </div>
+                                    <!-- User Id -->
+    <label>User Id</label>
+    <div>
+        <input type="number" name="Id" value="{{ entry['id'] }}" >
+    </div>
+                                    <!-- Number of Eggs present -->
+     <label>Number Of Eggs Present</label>
+    <div>
+        <input type="number" name="numeggspres" value="{{ entry['numeggspres'] }}" >
+    </div>
+                                    <!-- Alive Eggs -->
+    <label>Alive Eggs</label>
+    <div>
+        <input type="number" name="alive" value="{{ entry['alive'] }}" >
+    </div>
+                                <!-- Dead Eggs -->
+
+    <label>Dead Eggs</label>
+    <div>
+        <input type="number" name="dead" value="{{ entry['dead'] }}" >
+    </div>
+                            <!-- Active Species multiple select options-->
+    <label>Active Species</label>
+    <div>
+        <select class="select" name="activespecies" id="activespecies" data-value="{{ entry['activespecies'] }}">
+            <option>{{ entry['activespecies'] }}</option>
+            <option>Eastern Blue Bird</option>
+            <option>Tree Swallow</option>
+            <option>House Wren</option>
+            <option> Brown-Headed Cowbird</option>
+            <option>Uknown</option>
+            <option>Other</option>
+        </select>
+    </div>
+                            <!-- cowbirds multiple select options-->
+     <label>Cowbirds</label>
+    <div>
+        <select class="select" name="cowbird" id="cowbird" data-value="{{ entry['cowbird'] }}">
+             <option>{{ entry['cowbird'] }}</option>
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+    </div>
+                                <!-- repairs -->
+
+    <label>Repairs</label>
+    <div>
+        <select class="select" name="repairs" id="repairs" data-value="{{entry ['repairs']}}">
+            <option>{{ entry['repairs'] }}</option>
+             <option>Yes</option>
+            <option>No</option>
+            </select>
+    </div>
+                            <!-- submit-->
+    <form action="{{ url_for('main.tables', entryId=entry['entryId']) }}" method="POST" novalidate>
+        {{render_field(form.submit)}}
+    </form>
+</form>
+
+{% endblock %}

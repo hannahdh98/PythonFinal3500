@@ -1,0 +1,38 @@
+                                <!-- calls base.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+                                <!-- calls _formhelpers.html -->
+{% from "_formhelpers.html" import render_field %}
+<!--cautius reminder modal-->
+<article class="message is-danger" style="is-flex">
+  <div class="message-header">
+    <p>CAUTIOUS REMINDER</p>
+    <button class="delete" aria-label="delete"></button>
+  </div>
+  <div class="message-body" style="is-flex">
+	  Please be cautious when approaching and observing birds nest. Always remember to be aware of your surroundings and to not cause or disrupt the birds nest.
+  </div>
+</article>
+                                <!--fields-->
+<form method="POST" action='/entry.html' style="color:#000000;">
+  <dl>
+    {{ render_field(form.bhid) }}
+    {{ render_field(form.date) }}
+    {{ render_field(form.comments) }}
+    {{ render_field(form.numeggspres) }}
+    {{ render_field(form.alive) }}
+    {{ render_field(form.dead) }}
+    {{ render_field(form.activespecies) }}
+    {{ render_field(form.cowbird) }}
+    {{ render_field(form.repairs) }}
+    {{ render_field(form.id) }}
+    {{ render_field(form.other) }}
+
+
+  </dl>
+  <!--submit value-->
+  <p><input type="submit" value="submit"> </p>
+</form>
+    {% endblock %}
+

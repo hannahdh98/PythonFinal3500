@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<!--Welcome using jinja pulling the user name-->
+<h1 class="title" style="is-flex">
+    Welcome, {{ name }}!
+</h1>
+<!--modal that is popped up to make sure users are cautious-->
+<article class="message is-danger" style="is-flex">
+  <div class="message-header" style="is-flex">
+    <p>CAUTIOUS REMINDER</p>
+    <button class="delete" aria-label="delete"></button>
+  </div>
+  <div class="message-body" style="is-flex">
+	  Please be cautious when approaching and observing birds nest. Always remember to be aware of your surroundings and to not cause or disrupt the birds nest.
+  </div>
+</article>
+
+<!--header image-->
+<img src = "static/bird3.png" width="400" height="400">
+
+
+	{% endblock %}
+
+
+

@@ -1,0 +1,66 @@
+        		<!--calls base.html-->
+{% extends 'base.html' %}
+
+{% block content %}
+                <h1 class="title is-flex-mobile">
+Recent Entries Table
+                </h1>
+                <p>To Edit: Click edit and make the needed edits for the form</p>
+                <p>To Delete: Click Delete to delete the entry</p>
+
+
+  <!--table class and styles-->
+<div class="table-container">
+    {% for entry in table %}
+    <!--table-->
+<table class="table is-bordered" >
+  <thead>
+    <tr>
+      <th> Bird House Id</th>
+        <th> Date</th>
+        <th> id</th>
+        <th> Number of Eggs Present</th>
+        <th> Alive Eggs</th>
+        <th> Dead Eggs</th>
+        <th> Active Species</th>
+        <th> Other</th>
+        <th> Cowbirds</th>
+        <th> Repairs</th>
+        <th> Entry Id</th>
+        <th> Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>{{ entry.bhid }}</th>
+        <th>{{ entry.date }}</th>
+        <th>{{ entry.id }}</th>
+        <th>{{ entry.numeggspres }}</th>
+        <th>{{ entry.alive }}</th>
+        <th>{{ entry.dead}}</th>
+        <th>{{ entry.activespecies }}</th>
+        <th>{{ entry.other }}</th>
+        <th>{{ entry.cowbird }}</th>
+        <th>{{ entry.repairs }}</th>
+        <th>{{ entry.entryId }}</th>
+        <th>{{ entry.comments}}</th>
+
+        <td>
+              <!--delete button and action-->
+
+            <form action="{{ url_for('main.delete_entry', entryId=entry['entryId']) }}">
+              <button>Delete</button>
+            </form>
+              <!--edit button and delete button-->
+           <form action="{{ url_for('main.editEntry', entryId=entry['entryId']) }}">
+              <button>Edit</button>
+            </form>
+        </td>
+
+    </tr>
+  </tbody>
+  </table>
+  {% endfor %}
+</div>
+</section>
+{% endblock %}

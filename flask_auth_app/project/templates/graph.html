@@ -1,0 +1,64 @@
+<!--calls base.html-->
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="section">
+	<div class="container" style="is-flex">
+		<!--Fledglings per species-->
+		<h1 class="title">
+			Total Fledglings by Species
+			2017-2020 Bird Entries
+		</h1>
+
+		<hr>
+		<div class="graphs-container" data-title="2017-2020 Bird Entries">
+
+	<div class="container">
+				<!--Table of total Fledglings per species-->
+<table class="table is-hoverable table is-bordered">
+
+	<thead title="total fledglings per species">
+	<tr>
+		<th>Year</th>
+		<th>Eastern Bluebird</th>
+      <th>Tree Swallows</th>
+		<th>House Wrens</th>
+	</tr>
+
+	</thead>
+	<tbody>
+    <tr>
+      <td>2017-2020</td>
+		<td>286</td>
+		<td>355</td>
+		<td>312</td>
+    </tr>
+
+</table>
+		<!--graph of the recent entries-->
+
+		</div>
+			<div class="data-container column is-full columns is-mobile is-size-7 has-text-white is-marginless">
+				<div data-title="2017: 91 Eastern Bluebirds" data-value="91"></div>
+				<div data-title="2017: 41 Tree Swallows" data-value="41"></div>
+				<div data-title="2017: 125 House Wrens" data-value="125"></div>
+				<div data-title="2018: 49 Eastern Bluebirds" data-value="49"></div>
+				<div data-title="2018: 121 Tree Swallows" data-value="121"></div>
+				<div data-title="2018: 76 House Wrens" data-value="76"></div>
+				<div data-title="2019: 88 Eastern Bluebirds" data-value="88"></div>
+				<div data-title="2019: 94 Tree Swallows" data-value="94"></div>
+				<div data-title="2019: 51 House Wrens" data-value="51"></div>
+				<div data-title="2020: 58 Eastern Bluebirds" data-value="58"></div>
+				<div data-title="2020: 99 Tree Swallows" data-value="99"></div>
+				<div data-title="2020: 60 House Wrens" data-value="60"></div>
+			</div>
+		</div>
+	</div>
+
+		</section>
+<footer>
+	<!--calling graph.js-->
+	<script src="static/graph.js"></script>
+</footer>
+
+{% endblock %}
