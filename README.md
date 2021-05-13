@@ -9,11 +9,11 @@ To download this application, click the green code button in the upper right han
 
 # Get Started
 To use this application you will need to create a virtual environment. To help you set up your virutal environment here are two links for Mac users and Windows. As well as a link for downloading and installing PyCharm. You will also need to download Bulma. Bulma is used as a styling guide for this application. This application utilizes MySql Database. You will need to download mysql as well.
-Mac: https://opensource.com/article/19/6/python-virtual-environments-mac
-Windows: https://docs.python.org/3/library/venv.html
-Pycharm: https://www.jetbrains.com/help/pycharm/installation-guide.html
-Bulma: https://bulma.io/
-MySql:https://www.mysql.com/
+- Mac: https://opensource.com/article/19/6/python-virtual-environments-mac
+- Windows: https://docs.python.org/3/library/venv.html
+- Pycharm: https://www.jetbrains.com/help/pycharm/installation-guide.html
+- Bulma: https://bulma.io/
+- MySql:https://www.mysql.com/
 
 After you have your virtual env going, Open up your Pycharm and start a New Project. You will then place or open up your downloaded code. You can than start the application. To start the application, in the terminal in pycharm type this:
 
